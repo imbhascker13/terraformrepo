@@ -6,9 +6,6 @@ node {
    git 'https://github.com/imbhascker13/terraformrepo.git'
   }
     
- //def project_path="capstoneproject/capstoneproject/"
- 
-// dir(project_path) {
 
 	stage('AWS - Production Server Provisioning'){
 	   sh label: 'terraform', script: '/root/bin/terraform  init'
@@ -20,7 +17,7 @@ node {
 		}
   
    
-//}	-----------dir end---------  
+  
 
  notify('Job Completed')   
 } catch (err) {
